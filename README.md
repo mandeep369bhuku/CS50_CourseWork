@@ -1,6 +1,6 @@
 # This is CS50...
 
-This repository contains the course work, problem sets and projects related to the CS50 course by Harvard University.
+This repository contains the course work, problem sets and projects related to the CS50 course by Harvard University. CS50 is the quintessential Harvard course for a focused topic and broadly applicable skills in computer science.
 
 https://cs50.harvard.edu/x/2020/
 
@@ -18,8 +18,7 @@ https://cs50.harvard.edu/x/2020/
 
     * `substitution.c` : This is an improved version of the caesar's cipher. In this case instead of giving a simple value, a 26 alphabets key of characters was given as CLA and plain text was converted to cipher based on the defined key.
 
-* **Pset3** : The week 3 was dedicated to the topic of algorithms and their implementations in C language.
-The search, sort and greedy algorithm were introduced and problem sets pertaining to these topics were :
+* **Pset3** : The week 3 was dedicated to the topic of algorithms and their implementations in C language. The search, sort and greedy algorithm were introduced and problem sets pertaining to these topics were:
 
     * `plurality.c` : In this problem the “plurality vote” (also known as “first-past-the-post” or “winner take all”) code was developed to simulate a simple election process.
 
@@ -28,5 +27,11 @@ The search, sort and greedy algorithm were introduced and problem sets pertainin
     * `tideman.c` : The Tideman voting method (also known as “ranked pairs”) is a ranked-choice voting method that’s guaranteed to produce the Condorcet winner of the election if one exists. Condorcet winner of the election is a person who would have won any head-to-head matchup against another candidate. The tideman method analyses all draw cases to give definate results, hence an improvement over runoff.
 
 * **Pset4** : The week 4 of the course elaborated on the topics of memory handling, pointers, dynamic memory allocation,file R/W pointer, custom functions, stack and heap memory.
+
+* **Pset5** : The week 5, data structures.
+
+* **Pset6** : This is week 6 Pyhton
+
+* **Pset7** : Week 7 SQL
 
 ## Final Project

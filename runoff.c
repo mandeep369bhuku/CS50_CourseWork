@@ -143,7 +143,6 @@ bool vote(int voter, int rank, string name)
             return true;
         }
     }
-    // TODO
     return false;
 }
 
@@ -161,7 +160,6 @@ void tabulate(void)
             candidates[preferences[i][1]].votes += 1;
         }
     }
-    // TODO
     return;
 }
 
@@ -176,7 +174,6 @@ bool print_winner(void)
             return true;
         }
     }
-    // TODO
     return false;
 }
 
@@ -191,13 +188,13 @@ int find_min(void)
             minVotes = candidates[i].votes;
         }
     }
-    // TODO
     return minVotes;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
+    //Tied vote count
     int Votes_tie = (voter_count - min) / (candidate_count - 1);
     int count = 0;
     for (int i = 0; i < candidate_count; i++)
@@ -229,7 +226,6 @@ void eliminate(int min)
             candidates[i].eliminated = true;
         }
     }
-    // TODO
     return;
 }
 
