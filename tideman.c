@@ -32,6 +32,9 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+bool isSorted(int ar[], int size);
+void selectSort(int array[], int size);
+void swapMaximum(int arr[], int n, int ct);
 
 int main(int argc, string argv[])
 {
@@ -122,9 +125,9 @@ void record_preferences(int ranks[])
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = i+1; j < candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
-            if (ranks[i] != ranks[j])
+            if (i != j && ranks[i] != ranks[j])
             {
                 preferences[ranks[i]][ranks[j]] += 1;
             }
@@ -157,7 +160,16 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    
+    pair Max, temp;
+    int maxVote = 0;
+    int orignalPairs[pair_count], sortedPairs[pair_count];
+    for (int i = 0; i < pair_count; i++){
+        preferences[pairs[i].winner][pairs[i].loser] = orignalPairs[i];
+        sortedPairs[i] = orignalPairs[i];
+    }
+
+    selectSort(sortedPairs, pair_count);
+
     // TODO
     return;
 }
@@ -176,3 +188,45 @@ void print_winner(void)
     return;
 }
 
+// Triggers the select sort algorithm
+void selectSort(int array[], int size)
+{
+    //Count for keeping how many elements are sorted.
+    int count = 0;
+    while(!isSorted(array,size))
+    {
+        swapMaximum(array,size,count);
+        count++;
+    }
+}
+
+//Checks if array is sorted from highest to lowest value.
+bool isSorted(int array[], int size){
+    for (int i = 0; i < size; i++){
+        for (int j = i+1; j < size; j++){
+            if (array[i] < array[j])
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+
+//Swaps the maximum element in array
+void swapMaximum(int arr[], int n, int ct){
+    int max = arr[ct];
+    int indexMax = ct, temp;
+    for (int i=ct; i<n; i++){
+        if (max < arr[i]){
+            max = arr[i];
+            indexMax = i;
+        }
+    }
+    temp = arr[ct];
+    arr[ct] = max;
+    arr[indexMax] = temp;
+    
+    return;
+}
