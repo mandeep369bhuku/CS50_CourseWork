@@ -1,6 +1,6 @@
 # This is CS50...
 
-This repository contains the course work, problem sets and projects related to the CS50 course by Harvard University. CS50 is the quintessential Harvard course for a focused topic and broadly applicable skills in computer science.
+This repository contains the course work, problem sets and projects related to the CS50 course by Harvard University. CS50 is the quintessential Harvard course for a focused topic and broadly applicable skills in computer science.It will very beneficial to you if you complete this course.
 
 https://cs50.harvard.edu/x/2020/
 
